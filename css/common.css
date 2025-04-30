@@ -1,13 +1,13 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #header-container {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 #related-to-user {
