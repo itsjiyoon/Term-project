@@ -30,7 +30,56 @@ a:hover {
     color:gray;
 }
 
+#menu-bar {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #2a7cac;
+}
 
+#buttons {
+    display:flex;
+    justify-items:flex-start;
+}
 
+.dropbtn {
+    background-color: #2a7cac;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* 드랍다운 메뉴 위치조정 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* 드랍다운 컨텐츠들(숨겨짐) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* 드랍다운 메뉴 안에 링크들 */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* 드랍다운 메뉴들 hover 했을 때 색상 변경 */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* 버튼 hover 했을 때 드랍다운 메뉴 보임 */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* 드랍다운 버튼 hover 했을 때 색상 변경 */
+  .dropdown:hover .dropbtn {background-color: #698fee94;}
 
 
