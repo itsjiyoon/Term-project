@@ -82,4 +82,8 @@ a:hover {
   /* 드랍다운 버튼 hover 했을 때 색상 변경 */
   .dropdown:hover .dropbtn {background-color: #698fee94;}
 
-
+#search-bar {
+    display:flex;
+    height: 35px;
+    
+}
