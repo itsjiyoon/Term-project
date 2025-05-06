@@ -12,7 +12,7 @@ const ps = new kakao.maps.services.Places();
 let marker = null;
 let infowindow = null;
 
-// ✅ 여기에 병원 이름만 수정하면 됨
+// ✅ 여기에 병원 이름만 수정하면 됩니다 (근데 검색어가 제대로 인식이 안됨..)
 const keyword = "부산대학교병원";
 
 // 검색 실행
