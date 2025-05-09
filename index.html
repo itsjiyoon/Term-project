@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>GameHub</title>
+        <title>FindMyHospital</title>
         <link rel="shortcut icon" type="images/x-icon" href="images/logo.ico">
         <style>
             @import url(css/common.css);
@@ -67,6 +67,7 @@
 
         <div id="search-bar">
             <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
+            <div id="address-dropdown" class="dropdown-list"></div>
             <button id="search-button">검색</button>
         </div>
 
@@ -83,6 +84,7 @@
         <footer> <!--Index 페이지에 들어가는 Footer-->
 
         </footer>
+        
         <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7ae5cbdd5268f4154a3f72b8fe7c4e2f&libraries=services"></script>
             <script src="js/map.js"></script>
         <script src = "js/blogList.js"></script>
