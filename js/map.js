@@ -11,7 +11,7 @@ document.getElementById("search-input").addEventListener("input", async function
   const keyword = this.value.trim();
   if (keyword === "") return;
 
-  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&size=5`;
+  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&size=5&category_group_code="HP8"`;
 
   try {
     const response = await fetch(url, {
