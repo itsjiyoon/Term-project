@@ -7,11 +7,19 @@ let map = new kakao.maps.Map(mapContainer, {
 let marker = new kakao.maps.Marker();
 marker.setMap(map);
 
-document.getElementById("search-input").addEventListener("input", async function () {
-  const keyword = this.value.trim();
-  if (keyword === "") return;
+document.getElementById("search-button").addEventListener("click", async function () {
+  const region = document.getElementById("region-select").value;
+  const keyword = document.getElementById("search-input").value.trim();
 
-  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&size=5&category_group_code="HP8"`;
+  if (!keyword || !region) return;
+
+  const coords = koreaCityCoords[region];
+  if (!coords) return;
+
+  const [lat, lng] = coords;
+  const radius = 10000; 
+
+  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&x=${lng}&y=${lat}&radius=${radius}`;
 
   try {
     const response = await fetch(url, {
@@ -35,8 +43,16 @@ document.getElementById("search-input").addEventListener("input", async function
     });
 
     dropdown.style.display = "block";
+
+    if (data.documents.length > 0) {
+      const first = data.documents[0];
+      const moveLatLon = new kakao.maps.LatLng(first.y, first.x);
+      map.setCenter(moveLatLon);
+      marker.setPosition(moveLatLon);
+    }
+
   } catch (err) {
-    console.error("장소 검색 오류:", err);
+    console.error("검색 오류:", err);
   }
 });
 
@@ -92,3 +108,14 @@ function displayPosts(postList) {
     postListElement.appendChild(li);
   });
 }
+
+// 지역 좌표
+const koreaCityCoords = {
+  seoul: [37.5665, 126.9780],
+  busan: [35.1796, 129.0756],
+  daegu: [35.8722, 128.6025],
+  incheon: [37.4563, 126.7052],
+  gwangju: [35.1595, 126.8526],
+  daejeon: [36.3504, 127.3845],
+  ulsan: [35.5384, 129.3114],
+  sejong: [36.4800, 127.2890]};
