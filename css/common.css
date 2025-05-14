@@ -7,27 +7,27 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#header-color {
+.header-color {
   width: auto;
   height: 30px;
   background-color: #0071CE;
   margin: 0px 0px 0px 0px;
 }
 
-#footer-color {
+.footer-color {
     width: auto;
     height: 100px;
     background-color: #0071CE;
     margin: 0px 0px 0px 0px;
 }
 
-#header-container {
+.header-container {
     display:flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#related-to-user {
+.related-to-user {
     display:flex; 
     width: 200px;
     justify-content: space-evenly;
@@ -36,7 +36,7 @@ body {
     font-size: large;
 }
 
-#logo-area img {
+.logo-area img {
   margin-left: 70px;
 }
 
@@ -53,13 +53,13 @@ a:hover {
     color:gray;
 }
 
-#menu-bar {
+.menu-bar {
     display:flex;
     justify-content: space-evenly;
     background-color: #2a7cac;
 }
 
-#buttons {
+.buttons {
     display:flex;
     justify-items:flex-start;
 }
