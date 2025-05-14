@@ -25,6 +25,7 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
+    height: 200px;
 }
 
 .related-to-user {
@@ -35,6 +36,7 @@ body {
     margin-right: 70px;
     font-size: large;
 }
+
 
 .logo-area img {
   margin-left: 70px;
