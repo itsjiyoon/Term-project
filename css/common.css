@@ -1,7 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 100px;
-    margin-right: 100px;
+}
+
+#header-color {
+  width: auto;
+  height: 30px;
+  background-color: #0071CE;
+  margin: 0px 0px 0px 0px;
+}
+
+#footer-color {
+    width: auto;
+    height: 100px;
+    background-color: #0071CE;
+    margin: 0px 0px 0px 0px;
 }
 
 #header-container {
@@ -12,9 +29,15 @@ body {
 
 #related-to-user {
     display:flex; 
-    width: 150px;
+    width: 200px;
     justify-content: space-evenly;
     align-items: center;
+    margin-right: 70px;
+    font-size: large;
+}
+
+#logo-area img {
+  margin-left: 70px;
 }
 
 a {
