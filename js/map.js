@@ -19,7 +19,7 @@ document.getElementById("search-button").addEventListener("click", async functio
   const [lat, lng] = coords;
   const radius = 10000; 
 
-  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&x=${lng}&y=${lat}&radius=${radius}`;
+  const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${encodeURIComponent(keyword)}&x=${lng}&y=${lat}&radius=${radius}&category_group_code=HP8`;
 
   try {
     const response = await fetch(url, {
