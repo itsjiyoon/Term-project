@@ -61,5 +61,21 @@
       </div>
     </form>
   </div>
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const inputId = document.getElementById("loginId").value;
+      const inputPw = document.getElementById("loginPw").value;
+
+      const savedId = localStorage.getItem("userId");
+      const savedPw = localStorage.getItem("userPw");
+
+      if (inputId === savedId && inputPw === savedPw) {
+        alert("로그인 성공!");
+      } else {
+        alert("아이디 또는 비밀번호가 잘못되었습니다.");
+      }
+    }
+  </script>
 </body>
 </html>
