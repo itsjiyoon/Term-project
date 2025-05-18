@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .form-item {
+      margin-bottom: 15px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>회원가입</h2>
+    <form onsubmit="register(event)">
+      <div class="form-item">
+        <input type="text" id="regId" placeholder="아이디" required>
+      </div>
+      <div class="form-item">
+        <input type="password" id="regPw" placeholder="비밀번호" required>
+      </div>
+      <div class="form-item">
+        <button type="submit">회원가입</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function register(event) {
+      event.preventDefault();
+      const id = document.getElementById("regId").value;
+      const pw = document.getElementById("regPw").value;
+
+      localStorage.setItem("userId", id);
+      localStorage.setItem("userPw", pw);
+      alert("회원가입 완료!");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
