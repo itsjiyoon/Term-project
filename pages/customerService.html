@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>PNUHelper 고객센터</title>
         <link rel="shortcut icon" type="images/x-icon" href="../images/sanjini.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
         <style>
             @import url(../css/common.css);
             @import url(../css/customerService.css);
@@ -67,12 +68,53 @@
                 </div>
             </nav>
 
-        <div class="agent-container">
+        <div id="intro">
+            도움이 필요하신가요?<br>
+            <span id="awesome">멋진 교수님</span>께 도움을 요청해보세요!
+        </div>
+
+        <div id="agent-container">
             <div>
                 <img id="prof" src="../images/professor.png" width="300px">
             </div>
+            <div id="description">
+                <p class="type">Email</p>
+                <p>taewoon@pusan.ac.kr</p>
+                <br>
+                <p class="type">Location</p>
+                <p>313-302, PNU</p>
+                <br>
+                <p class="type">Lab</p>
+                <p>연결지능시스템연구실</p>
+            </div>
         </div>
-            
+
+       <form class="form-area">
+            <input type="hidden" name="form-url" value="">
+            <ul>
+                <li>
+                    <input type="text" name="name" id="name" required class="input" maxlength="20">
+                    <label for="name">이름</label>                
+                </li>
+                <li>
+                    <input type="text" name="phone" id="phone" required class="input" maxlength="13" placeholder="000-0000-0000">             
+                    <label for="phone">연락처</label>                
+                </li>
+                <li>
+                    <textarea name="content" id="content" class="input"></textarea>
+                    <label for="content">문의내용</label>                
+                </li>                                
+            </ul>
+
+            <div class="agree-area">
+                <a id="agree-link">개인정보취급방침</a>
+                <label for="check">동의</label>
+                <input type="checkbox" name="check" id="check" class="check-box">
+            </div>
+            <input type="submit" value="등록하기" id="submit">
+        </form>
+
+        <script src="../js/customerService.js"></script>
     </body>
 
     <footer> <!--Index 페이지에 들어가는 Footer-->
