@@ -26,7 +26,7 @@ document.getElementById("submit").addEventListener("click", function (e) {
     } 
     
     else if (!isChecked) {
-      alert("개인정보취급방침에 동의해주세요.");
+      alert("개인정보처리방침에 동의해주세요.");
       return;
     } 
     
