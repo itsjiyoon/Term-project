@@ -11,3 +11,27 @@ document.getElementById("phone").addEventListener("input", function (e) {
 
   e.target.value = num;
 });
+
+document.getElementById("submit").addEventListener("click", function (e) {
+    e.preventDefault(); // 제출로 인한 새로고침 방지
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const content = document.getElementById("content").value.trim();
+    const isChecked = document.getElementById("check").checked;
+
+    if (name === "" || phone === "" || content === "") {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    } 
+    
+    else if (!isChecked) {
+      alert("개인정보취급방침에 동의해주세요.");
+      return;
+    } 
+    
+    alert("접수 되었습니다!");
+    location.reload();
+
+    
+  });
