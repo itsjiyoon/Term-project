@@ -32,6 +32,13 @@ document.getElementById("submit").addEventListener("click", function (e) {
     
     alert("접수 되었습니다!");
     location.reload();
-
-    
   });
+
+window.addEventListener('DOMContentLoaded', function() {
+    const img = document.querySelector('#prof img');
+    if (!img) return;
+
+    setTimeout(function() {
+        img.style.animation = 'none';
+    }, 4000);
+});
