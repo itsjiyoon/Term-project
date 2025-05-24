@@ -15,10 +15,21 @@ body {
 }
 
 .footer-color {
-    width: auto;
-    height: 100px;
-    background-color: #0071CE;
-    margin: 0px 0px 0px 0px;
+  width: auto;
+  height: 100px;
+  background-color: #0071CE;
+  margin: 0px;
+  color: white;
+
+  display: flex;              /* 수평 정렬 활성화 */
+  justify-content: center;    /* 중앙 정렬 (또는 space-between 등) */
+  align-items: center;        /* 수직 정렬 (height 기준) */
+  gap: 20px;                  /* 항목 간 간격 */
+}
+
+.footer-color > div {
+  text-align: center;
+  padding: 10px;
 }
 
 .header-container {
