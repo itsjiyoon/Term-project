@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <title>ID 찾기</title>
   <style>
+    @import url(../css/common.css);
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: white;
+      margin: 0;
+      padding: 0;
     }
     .container {
       background-color: white;
@@ -18,6 +17,7 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 320px;
+      margin: 50px auto;
     }
     .form-item {
       margin-bottom: 15px;
@@ -44,9 +44,72 @@
       font-size: 15px;
       color: blue;
     }
+    .link-group {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .link-group a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #2196F3;
+      font-size: 14px;
+    }
+    .link-group a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <div class="header-color"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-area"><a href="../index.html">
+        <img src="../images/pnuhelper.png" width="300px"></a>
+      </div>
+      <div class="related-to-user">
+        <div><a href="customerService.html">고객센터</a></div>
+        <div><a href="login.html" class="login-button">로그인</a></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-bar">
+    <div class="buttons">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <div class="container">
     <h2>ID 찾기</h2>
     <form onsubmit="findId(event)">
@@ -61,6 +124,11 @@
       </div>
     </form>
     <div id="result"></div>
+    <div class="link-group">
+      <a href="login.html" >로그인</a> |
+      <a href="signup.html">회원가입</a> |
+      <a href="Passwordfind.html">비밀번호 찾기</a>
+    </div>
   </div>
 
   <script>
@@ -84,4 +152,8 @@
     }
   </script>
 </body>
+<footer> <!--Index 페이지에 들어가는 Footer-->
+        <div class="footer-color"></div>
+    </footer>
 </html>
+
