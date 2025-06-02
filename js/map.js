@@ -1,3 +1,15 @@
+// 지역 좌표
+const koreaCityCoords = {
+  seoul: [37.5665, 126.9780],
+  busan: [35.1796, 129.0756],
+  daegu: [35.8722, 128.6025],
+  incheon: [37.4563, 126.7052],
+  gwangju: [35.1595, 126.8526],
+  daejeon: [36.3504, 127.3845],
+  ulsan: [35.5384, 129.3114],
+  sejong: [36.4800, 127.2890]};
+
+
 const mapContainer = document.getElementById('map');
 let map = new kakao.maps.Map(mapContainer, {
   center: new kakao.maps.LatLng(37.5665, 126.9780), // 초기 위치
@@ -24,7 +36,7 @@ document.getElementById("search-button").addEventListener("click", async functio
   try {
     const response = await fetch(url, {
       headers: {
-        Authorization: "KakaoAK {APIKEY}" 
+        Authorization: "KakaoAK " 
       }
     });
 
@@ -89,6 +101,10 @@ function searchBlogReviews(keyword) {
         link: item.link
       }));
       displayPosts(postList); 
+    if (postList.length > 0) {
+        const iframe = document.getElementById("review");
+        iframe.src = postList[0].link;
+      }
     })
     .catch(err => console.error("블로그 검색 오류:", err));
 }
@@ -109,13 +125,3 @@ function displayPosts(postList) {
   });
 }
 
-// 지역 좌표
-const koreaCityCoords = {
-  seoul: [37.5665, 126.9780],
-  busan: [35.1796, 129.0756],
-  daegu: [35.8722, 128.6025],
-  incheon: [37.4563, 126.7052],
-  gwangju: [35.1595, 126.8526],
-  daejeon: [36.3504, 127.3845],
-  ulsan: [35.5384, 129.3114],
-  sejong: [36.4800, 127.2890]};

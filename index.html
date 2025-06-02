@@ -24,7 +24,7 @@
                     </div>
                     
                     <div>
-                        <a href="#" class="login-button">로그인</a>
+                        <a href="pages/login.html" class="login-button">로그인</a>
                     </div>
                 </div>
            </div>
@@ -33,76 +33,89 @@
         <nav class="menu-bar"> <!--메뉴 바-->
             <div class="buttons">
                 <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
+                <button class="dropbtn">병원 동행 서비스</button>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                  <a href="https://news.seoul.go.kr/welfare/archives/537252" target="_blank">서울</a>
+                  <a href="https://www.busan.go.kr/anbu/abproject" target="_blank">부산</a>
+                  <a href="https://www.idolbom.go.kr/front/biz/srvcGuide" target="_blank">대구</a>
+                  <a href="https://www.incheon.go.kr/1in/OHH020104/view?oneHouseHoldId=A2023121300300200400000070&utm_source=chatgpt.com" target="_blank">인천</a>
+                  <a href="https://ssdj.or.kr/bbs/content.php?co_id=dailycareservice" target="_blank">대전</a>
+                  <a href="https://gg24.gg.go.kr/svcreqst/selectSvcReqst.do?svc_seq=850" target="_blank">경기도</a>
+                  <a href="https://gjhwscoop.org/ko/hubulance/" target="_blank">광주</a>
+                  <a href="https://www.xn--2q1bm1i2plcmq.com/" target="_blank">제주</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-        </div>
-        </nav>
-
-        <div id="search-bar">
-            <form>
-                <select name="region" id = 'region-select'>
-                    <option value="seoul">서울</option>
-                    <option value="busan" selected>부산</option>
-                    <option value="daegu">대구</option>   
-                    <option value="incheon">인천</option> 
-                    <option value="daejeon">대전</option>
-                    <option value="gwangju">광주</option> 
-                    <option value="jeju">제주</option>      
-                    <option value="ulsan">울산</option>  
-                    <option value="sejong">세종</option>
-                </select>
-            </form>
-            <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
-            <div id="address-dropdown" class="dropdown-list"></div>
-            <button id="search-button">검색</button>
         </div>
         </nav>
     
         <main class="main">
             <div id="map-and-list-container">
-              <div id="map"></div>
-              <div id="list-container">
-                <ul id="post-list"></ul>
+          
+              <div id="top-bar">
+                <span id="title">어디가 아프신가요?</span>
+          
+                <select name="region" id="region-select">
+                  <option value="seoul">서울</option>
+                  <option value="busan" selected>부산</option>
+                  <option value="daegu">대구</option>
+                  <option value="incheon">인천</option>
+                  <option value="daejeon">대전</option>
+                  <option value="gwangju">광주</option>
+                  <option value="jeju">제주</option>
+                  <option value="ulsan">울산</option>
+                  <option value="sejong">세종</option>
+                </select>
+          
+                <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
+                <button id="search-button">검색</button>
+
+                <div id="address-dropdown" class="dropdown-list"></div>
               </div>
+          
+              <div id="content-container">
+                <div id="map"></div>
+                <div id="list-container">
+                  <ul id="post-list"></ul>
+                </div>
+              </div>
+          
             </div>
           </main>
 
         <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7ae5cbdd5268f4154a3f72b8fe7c4e2f&libraries=services"></script>
             <script src="js/map.js"></script>
         <script src = "js/blogList.js"></script>
-    </body>
 
-    <footer> <!--Index 페이지에 들어가는 Footer-->
-        <div class="footer-color"></div>
-    </footer>
+        <!--<iframe id="review" style="width: 100%; height: 500px; border: none;"></iframe>-->
+
+        <div class="handwashing-steps" style="text-align: center;">
+          <img src="images/handwash.jpg">
+        </div>
+        <div class ="pnu-add" style = "text-align: center;">
+          <img src = "images/pnu-ad.jpeg" >
+        </div>
+        <div class = "pnu_mall" style="text-align: center;">
+          <a href="https://www.pnumall.com" target="_blank">
+            <img src="images/pnu-mall.png"></a>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-color">
+          <div class="schoolLogos"></div>
+          <div class="members">
+            인터넷과 웹기초 텀 프로젝트 4 팀<br>
+            김지윤 jiyoon@pusan.ac.kr <br>
+            노신 normengdie@pusan.ac.kr <br>
+            김지수 jisoo1024@pusan.ac.kr
+          </div>
+          <div class="infor">
+            Contact Us : <br> taewoon@pusan.ac.kr <br> <br>
+            @ 2025 PNU INT & WEB Team 4
+          </div>
+          <div class="LOGO">
+            <img src ="images/pnuhelper.png" width="200" height="200">
+          </div>
+        </div>
+      </footer>
     
 </html>

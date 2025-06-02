@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <title>ID 찾기</title>
   <style>
+    @import url(../css/common.css);
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: white;
+      margin: 0;
+      padding: 0;
     }
     .container {
       background-color: white;
@@ -18,6 +17,7 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 320px;
+      margin: 50px auto;
     }
     .form-item {
       margin-bottom: 15px;
@@ -31,22 +31,66 @@
       font-size: 16px;
     }
     button {
-      background-color: #4CAF50;
+      background-color: #2196F3;
       color: white;
       border: none;
       cursor: pointer;
     }
     button:hover {
-      background-color: #45a049;
+      background-color: #1976D2;
     }
     #result {
       margin-top: 15px;
       font-size: 15px;
       color: blue;
     }
+    .link-group {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .link-group a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #2196F3;
+      font-size: 14px;
+    }
+    .link-group a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <div class="header-color"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-area"><a href="../index.html">
+        <img src="../images/pnuhelper.png" width="300px"></a>
+      </div>
+      <div class="related-to-user">
+        <div><a href="customerService.html">고객센터</a></div>
+        <div><a href="login.html" class="login-button">로그인</a></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-bar"> <!--메뉴 바-->
+    <div class="buttons">
+        <div class="dropdown">
+        <button class="dropbtn">병원 동행 서비스</button>
+        <div class="dropdown-content">
+          <a href="https://news.seoul.go.kr/welfare/archives/537252" target="_blank">서울</a>
+          <a href="https://www.busan.go.kr/anbu/abproject" target="_blank">부산</a>
+          <a href="https://www.idolbom.go.kr/front/biz/srvcGuide" target="_blank">대구</a>
+          <a href="https://www.incheon.go.kr/1in/OHH020104/view?oneHouseHoldId=A2023121300300200400000070&utm_source=chatgpt.com" target="_blank">인천</a>
+          <a href="https://ssdj.or.kr/bbs/content.php?co_id=dailycareservice" target="_blank">대전</a>
+          <a href="https://gg24.gg.go.kr/svcreqst/selectSvcReqst.do?svc_seq=850" target="_blank">경기도</a>
+          <a href="https://gjhwscoop.org/ko/hubulance/" target="_blank">광주</a>
+          <a href="https://www.xn--2q1bm1i2plcmq.com/" target="_blank">제주</a>
+        </div>
+        </div>
+</div>
+</nav>
   <div class="container">
     <h2>ID 찾기</h2>
     <form onsubmit="findId(event)">
@@ -61,6 +105,11 @@
       </div>
     </form>
     <div id="result"></div>
+    <div class="link-group">
+      <a href="login.html" >로그인</a> |
+      <a href="signup.html">회원가입</a> |
+      <a href="Passwordfind.html">비밀번호 찾기</a>
+    </div>
   </div>
 
   <script>
@@ -83,5 +132,29 @@
       }
     }
   </script>
+
+<div class = "pnu_mall" style="text-align: center;">
+  <a href="https://www.pnumall.com" target="_blank">
+  <img src="../images/pnu-mall.png"></a>
+</div>
 </body>
+<footer> <!--Index 페이지에 들어가는 Footer-->
+  <div class="footer-color">
+    <div class="schoolLogos"></div>
+    <div class="members">
+      인터넷과 웹기초 텀 프로젝트 4 팀<br>
+      김지윤 jiyoon@pusan.ac.kr <br>
+      노신 normengdie@pusan.ac.kr <br>
+      김지수 jisoo1024@pusan.ac.kr
+    </div>
+    <div class="infor">
+      Contact Us : <br> taewoon@pusan.ac.kr <br> <br>
+      @ 2025 PNU INT & WEB Team 4
+    </div>
+    <div class="LOGO">
+      <img src ="../images/pnuhelper.png" width="200" height="200">
+    </div>
+  </div>
+    </footer>
 </html>
+
