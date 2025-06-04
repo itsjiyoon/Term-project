@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem 6rem;
+  gap: 3rem;
+}
+
+
+#first-reason, #second-reason, #third-reason, #forth-reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nanum Gothic", sans-serif;
+    width: 800px;
+    line-height: 1.4;
+}
+
+.reason {
+    font-family: "Jua", sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    align-self: flex-start;
+}
+
+.explanation {
+    align-self: flex-start;
+    line-height: 1.8;
+    text-align: left;
+    color: #333;
+    letter-spacing: -0.2px;
+    font-size: 20.5px;
+}
+
+.introduction {
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    color:rgb(45, 45, 89);
+}
+
+.opening {
+    margin-top: 50px;
+    font-size: 60px;
+}
+
+.pnu {
+    color:#0071CE;
+    font-weight: 900;
+}
+
+.helper {
+    color:#3AC53F;
+    font-weight: 900;
+}
+
+hr {
+    width: 500px;
+    margin: auto;
+    height: 4px;
+    margin-top: 30px;
+    border:none;
+    background-color: #0071CE;
+}
+
+.question {
+    margin-top: 24px;
+    font-size: 70px;
+}
+
+.prof {
+    margin-right: 0;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.8s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
