@@ -83,3 +83,13 @@
   margin-right: 10px; 
   object-fit: cover; 
 }
+
+#search-button:active {
+    background-color: #2980b9;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #1a94e1a4;
+    cursor: pointer;
+  }
