@@ -3,34 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <title>PNUHelper</title>
-        <link rel="shortcut icon" type="images/x-icon" href="images/sanjini.png">
+        <link rel="shortcut icon" type="images/x-icon" href="../images/sanjini.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap">
         <style>
-            @import url(css/common.css);
-            #map{width : 70%; height:500px; margin: 0 auto;}
+            @import url(../css/common.css);    
+            @import url(../css/introduction.css);
         </style>
     </head>
 
     <body>
-        <div class="header-color"></div> <!--container for color above header-->
+         <div class="header-color"></div> <!--container for color above header-->
         <header> <!--Index 페이지에 들어가는 Header-->
            <div class="header-container">
                 <div class="logo-area"><a href="../index.html">
-                    <img src="images/pnuhelper.png" width="300px">
+                    <img src="../images/pnuhelper.png" width="300px">
                 </div>
 
                 <div class="related-to-user">
                     <div>
-                        <a href="pages/customerService.html">고객센터</a>
+                        <a href="../pages/customerService.html">고객센터</a>
                     </div>
                     
                     <div>
-                        <a href="pages/login.html" class="login-button">로그인</a>
+                        <a href="../pages/login.html" class="login-button">로그인</a>
                     </div>
                 </div>
            </div>
         </header> 
 
-  <nav class="menu-bar">
+<nav class="menu-bar">
     <div class="buttons">
       <div class="dropdown">
         <button class="dropbtn no-pointer">병원 동행 서비스</button>
@@ -51,75 +52,91 @@
       </div>
     </div>
   </nav>
-    
-        <main class="main">
-            <div id="map-and-list-container">
-          
-              <div id="top-bar">
-                <span id="title">병원을 검색해 보세요</span>
-          
-                <select name="region" id="region-select">
-                  <option value="seoul">서울</option>
-                  <option value="busan" selected>부산</option>
-                  <option value="daegu">대구</option>
-                  <option value="incheon">인천</option>
-                  <option value="daejeon">대전</option>
-                  <option value="gwangju">광주</option>
-                  <option value="jeju">제주</option>
-                  <option value="ulsan">울산</option>
-                  <option value="sejong">세종</option>
-                </select>
-          
-                <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
-                <button id="search-button">검색</button>
 
-                <div id="address-dropdown" class="dropdown-list"></div>
-              </div>
-          
-              <div id="content-container">
-                <div id="map"></div>
-                <div id="list-container">
-                  <ul id="post-list"></ul>
-                </div>
-              </div>
-          
+        <div class="introduction">
+            <p class="opening">
+                어디가 아프신가요?<br>
+                <span class="pnu">PNU</span><span class="helper">Helper</span>가 필요하시겠군요!
+            </p>
+            <p class="question">
+                근데 왜 <span class="pnu">PNU</span><span class="helper">Helper</span>일까요?
+            </p>
+            <hr>
+        </div>
+        <div class="card">
+            <img class="prof" src="../images/professor-jumping.png">
+            <div id="first-reason">
+            <p class="reason">
+                <span class="pnu">PNU</span><span class="helper">Helper</span>는 원하는 지역의<br>병원 검색을 지원해요
+            </p>
+            <p class="explanation">
+                원하는 지역을 선택하고 검색하면<br>
+                근처 병원의 위치를 지도에서 바로 확인할 수 있어요.<br>
+                우리 집과 얼마나 가까운지도 한눈에 확인 가능하죠.<br>
+                <strong>빠르고 정확한 병원 찾기</strong>,
+                이제는 길 헤매지 말고,<br>바로 진료를 받아보세요.
             </div>
-          </main>
-
-        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7ae5cbdd5268f4154a3f72b8fe7c4e2f&libraries=services"></script>
-            <script src="js/map.js"></script>
-        <script src = "js/blogList.js"></script>
-
-        <!--<iframe id="review" style="width: 100%; height: 500px; border: none;"></iframe>-->
-
-        <div class="handwashing-steps" style="text-align: center;">
-          <img src="images/handwash.jpg">
         </div>
-        <div class ="pnu-add" style = "text-align: center;">
-          <img src = "images/pnu-ad.jpeg" >
+        <hr>
+        <div class="card">
+            <img class="prof" src="../images/professor-flying.png">
+            <div id="second-reason">
+            <p class="reason">
+                <span class="pnu">PNU</span><span class="helper">Helper</span>는<br>병원 동행 서비스를 알려드려요
+            </p>
+            <p class="explanation">
+                병원에 혼자 가기 어려우신가요?<br>
+                <span class="pnu">PNU</span><span class="helper">Helper</span>가 추천하는
+                <strong>병원 동행 서비스</strong>를 이용해보세요.<br>
+                낯선 길도, 혼자 걱정할 필요 없어요.<br>믿을 수 있는 누군가와 함께하세요.
+            </p>
+            </div>
         </div>
-        <div class = "pnu_mall" style="text-align: center;">
-          <a href="https://www.pnumall.com" target="_blank">
-            <img src="images/pnu-mall.png"></a>
+        <hr>
+        <div class="card">
+            <img class="prof" src="../images/professor-standing.png">
+            <div id="third-reason">
+            <p class="reason">
+                <span class="pnu">PNU</span><span class="helper">Helper</span>는 리뷰도 지원해요
+            </p>
+            <p class="explanation">
+                이 병원이 믿을 만한 곳인지 궁금하신가요?<br>
+                <span class="pnu">PNU</span><span class="helper">Helper</span>는 직접 진료를 받은 분들의 
+                <strong>생생한 블로그 리뷰</strong>를 제공해드려요. 
+                방문 전, 실제 경험담으로 안심하세요.
+            </p>
+            </div>
         </div>
+        <hr>
+        <div class="card">
+            <img class="prof" src="../images/professor-shy.png">
+            <div id="forth-reason">
+            <p class="reason">
+                4팀이 최고~!<br>
+                당장 회원가입하시고 <span class="pnu">PNU</span><span class="helper">Helper</span>를 이용해보세요!
+            </p>
+            </div>
+        </div>
+
+        <script src="../js/introduction.js"></script>
     </body>
-    <footer>
+
+    <footer> <!--Index 페이지에 들어가는 Footer-->
         <div class="footer-color">
-          <div class="schoolLogos"><img src="images/pnu-logo.png"></div>
-          <div class="members">
-            인터넷과 웹기초 텀 프로젝트 4 팀<br>
-            김지윤 jiyoon@pusan.ac.kr <br>
-            노신 normengdie@pusan.ac.kr <br>
-            김지수 jisoo1024@pusan.ac.kr
+            <div class="schoolLogos"><img src="../images/pnu-logo.png"></div>
+            <div class="members">
+              인터넷과 웹기초 텀 프로젝트 4 팀<br>
+              김지윤 jiyoon@pusan.ac.kr <br>
+              노신 normengdie@pusan.ac.kr <br>
+              김지수 jisoo1024@pusan.ac.kr
+            </div>
+            <div class="infor">
+              Contact Us : <br> taewoon@pusan.ac.kr <br> <br>
+              @ 2025 PNU INT & WEB Team 4
+            </div>
+            <div class="LOGO">
+              <img src ="../images/pnuhelper-footer.png" width="200" height="200">
+            </div>
           </div>
-          <div class="infor">
-            Contact Us : <br> taewoon@pusan.ac.kr <br> <br>
-            @ 2025 PNU INT & WEB Team 4
-          </div>
-          <div class="LOGO">
-            <img src ="images/pnuhelper-footer.png" width="200" height="200">
-          </div>
-        </div>
-      </footer>
-    
+    </footer>
 </html>
