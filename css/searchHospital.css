@@ -10,11 +10,13 @@
   max-width: 1200px;
   margin: auto;
 }
+
 #title {
   font-weight: bold;
   font-size: 1.5rem;
   white-space: nowrap;
 }
+
 #region-select,
 #search-input,
 #search-button {
@@ -32,15 +34,15 @@
 }
 
 #map {
-  flex: 2; 
+  flex: 2;
   height: 500px;
-  background-color: #eee; 
+  background-color: #eee;
 }
 
 #top-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   gap: 15px;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -57,7 +59,7 @@
   max-height: 200px;
   overflow-y: auto;
   width: calc(150px + 8px * 2);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -70,6 +72,16 @@
   background-color: #f1f1f1;
 }
 
+#search-button:active {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #1a94e1a4;
+  cursor: pointer;
+}
+
 #list-container {
   flex: 1;
   height: 500px;
@@ -77,43 +89,96 @@
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 10px;
+  box-sizing: border-box;
 }
-  
+
+#hospital-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#hospital-list li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+.hospital-item {
+  padding: 5px 0;
+}
+
+.hospital-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.hospital-address,
+.hospital-phone {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.hospital-link {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.hospital-link:hover {
+  text-decoration: underline;
+}
+
 #post-list {
   list-style: none;
   padding: 0;
 }
 
 #post-list li {
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 10px;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
-  
+
 #post-list li a {
   font-size: 10px;
   color: #333;
   text-decoration: none;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   padding: 10px;
 }
-  
+
 .post-image {
-  width: 50px; 
-  height: 50px; 
-  margin-right: 10px; 
-  object-fit: cover; 
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 
-#search-button:active {
-    background-color: #2980b9;
-    cursor: pointer;
+#hospital-list li:hover {
+  cursor: pointer;
+  background-color: #e9e9e9;
 }
 
-#search-button:hover {
-    background-color: #1a94e1a4;
-    cursor: pointer;
-  }
+#review {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#kakao-review-container {
+    background-image: url('../images/iframe-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#kakao-review-iframe {
+    background-color: transparent;
+}
