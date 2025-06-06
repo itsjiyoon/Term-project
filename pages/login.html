@@ -124,33 +124,7 @@
     </div>
   </div>
 
-  <script>
-    function login(event) {
-      event.preventDefault();
-      const inputId = document.getElementById("loginId").value;
-      const inputPw = document.getElementById("loginPw").value;
-
-      const savedId = localStorage.getItem("userId");
-      const savedPw = localStorage.getItem("userPw");
-
-      if (inputId === savedId && inputPw === savedPw) {
-        alert("로그인 성공!");
-        localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "../index.html";
-      } else {
-        alert("아이디 또는 비밀번호가 잘못되었습니다.");
-      }
-    }
-    window.addEventListener("DOMContentLoaded", function () {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    const loginButton = document.querySelector(".login-button");
-
-    if (isLoggedIn === "true" && loginButton) {
-      loginButton.textContent = "마이페이지";
-      loginButton.href = "mypage.html"; // 마이페이지 경로 설정
-    }
-  });
-  </script>
+<script src="../js/login.js"></script>
 
 <div class = "pnu_mall" style="text-align: center;">
   <a href="https://www.pnumall.com" target="_blank">
