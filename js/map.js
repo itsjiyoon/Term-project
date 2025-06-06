@@ -117,7 +117,7 @@ function displayPosts(postList) {
     const li = document.createElement("li");
     li.innerHTML = `
     <a href="${post.link}" target="_blank">
-        <img src="images/sanjini.png" alt="블로그 이미지" class="post-image" />
+        <img src="../images/sanjini.png" alt="블로그 이미지" class="post-image" />
         ${post.title}
       </a>
     `;
