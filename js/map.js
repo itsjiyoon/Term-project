@@ -12,7 +12,7 @@ const koreaCityCoords = {
 
 const mapContainer = document.getElementById('map');
 let map = new kakao.maps.Map(mapContainer, {
-  center: new kakao.maps.LatLng(37.5665, 126.9780), // 초기 위치
+  center: new kakao.maps.LatLng(koreaCityCoords.busan[0], koreaCityCoords.busan[1]), 
   level: 3
 });
 
