@@ -67,52 +67,41 @@
     </div>
   </nav>
     
-        <main class="main">
-            <div id="map-and-list-container">
-          
-              <div id="top-bar">
+    <main class="main">
+        <div id="map-and-list-container">
+            <div id="top-bar">
                 <span id="title">병원을 검색해 보세요</span>
-          
                 <select name="region" id="region-select">
-                  <option value="seoul">서울</option>
-                  <option value="busan" selected>부산</option>
-                  <option value="daegu">대구</option>
-                  <option value="incheon">인천</option>
-                  <option value="daejeon">대전</option>
-                  <option value="gwangju">광주</option>
-                  <option value="jeju">제주</option>
-                  <option value="ulsan">울산</option>
-                  <option value="sejong">세종</option>
+                    <option value="seoul">서울</option>
+                    <option value="busan" selected>부산</option>
+                    <option value="daegu">대구</option>
+                    <option value="incheon">인천</option>
+                    <option value="daejeon">대전</option>
+                    <option value="gwangju">광주</option>
+                    <option value="jeju">제주</option>
+                    <option value="ulsan">울산</option>
+                    <option value="sejong">세종</option>
                 </select>
-          
                 <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
                 <button id="search-button">검색</button>
-                <script>
-                  document.getElementById("search-input").addEventListener("keydown", function (event) {
-                    if (event.key === "Enter") {
-                      document.getElementById("search-button").click();
-                    }
-                  });
-                </script>
-
                 <div id="address-dropdown" class="dropdown-list"></div>
-              </div>
-          
-              <div id="content-container">
+            </div>
+
+            <div id="content-container">
                 <div id="map"></div>
                 <div id="list-container">
-                  <ul id="post-list"></ul>
+                    <ul id="hospital-list"></ul>
                 </div>
-              </div>
-          
             </div>
-          </main>
+            <div id="kakao-review-container">
+                    <h2 id="review">⭐️ 병원 후기 ⭐️</h2>
+                    <iframe id="kakao-review-iframe" style="width:100%; height:400px; border:1px solid #ccc;"></iframe>
+            </div>
+        </div>
+    </main>
 
-        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=[APPKEY]]&libraries=services"></script>
+        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bdd8aaf958c09861fd3055e25c741d10&libraries=services"></script>
         <script src="../js/map.js"></script>
-        <script src = "../js/blogList.js"></script>
-
-        <!--<iframe id="review" style="width: 100%; height: 500px; border: none;"></iframe>-->
 
         <div class="handwashing-steps" style="text-align: center;">
           <img src="../images/handwash.jpg">
