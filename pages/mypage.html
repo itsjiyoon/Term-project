@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마이페이지</title>
+  <link rel="shortcut icon" type="images/x-icon" href="../images/sanjini.png">
+  <style>
+    @import url(../css/common.css);
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+      margin: 50px auto; /* 페이지 중앙 정렬 */
+    }
+
+    .form-item {
+      margin-bottom: 15px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1976D2;
+    }
+
+    .link-group {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .link-group a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #2196F3;
+      font-size: 14px;
+    }
+
+    .link-group a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 400px;
+      margin: 80px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .info {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+    .dropbtn:hover{
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-color"></div>
+  <header>
+    <div class="header-container">
+      <div class="logo-area"><a href="../index.html">
+        <img src="../images/pnuhelper.png" width="300px"></a>
+      </div>
+      <div class="related-to-user">
+        <div><a href="customerService.html">고객센터</a></div>
+
+      </div>
+    </div>
+  </header>
+
+<nav class="menu-bar">
+    <div class="buttons">
+      <div class="menu-link">
+        <a href="../index.html" class="dropbtn" target="_self">소개</a>
+      </div>
+      <div class="dropdown">
+        <a class="dropbtn no-pointer">병원 동행 서비스</a>
+        <div class="dropdown-content">
+          <a href="https://news.seoul.go.kr/welfare/archives/537252" target="_blank">서울</a>
+          <a href="https://www.busan.go.kr/anbu/abproject" target="_blank">부산</a>
+          <a href="https://www.idolbom.go.kr/front/biz/srvcGuide" target="_blank">대구</a>
+          <a href="https://www.incheon.go.kr/1in/OHH020104/view?oneHouseHoldId=A2023121300300200400000070" target="_blank">인천</a>
+          <a href="https://ssdj.or.kr/bbs/content.php?co_id=dailycareservice" target="_blank">대전</a>
+          <a href="https://gg24.gg.go.kr/svcreqst/selectSvcReqst.do?svc_seq=850" target="_blank">경기도</a>
+          <a href="https://gjhwscoop.org/ko/hubulance/" target="_blank">광주</a>
+          <a href="https://www.xn--2q1bm1i2plcmq.com/" target="_blank">제주</a>
+        </div>
+      </div>
+
+      <div class="menu-link">
+        <a href="searchHospital.html" class="dropbtn" target="_self">병원 찾기</a>
+      </div>
+    </div>
+  </nav>
+    
+  <div class="container">
+    <h2>회원 정보</h2>
+    <div class="info"><strong>이름:</strong> <span id="userName"></span></div>
+    <div class="info"><strong>전화번호:</strong> <span id="userPhone"></span></div>
+    <div class="info"><strong>아이디:</strong> <span id="userId"></span></div>
+    <button onclick="logout()">로그아웃</button>
+  </div>
+
+  <script>
+    // 저장된 사용자 정보 불러오기
+    document.getElementById("userName").textContent = localStorage.getItem("userName") || "정보 없음";
+    document.getElementById("userPhone").textContent = localStorage.getItem("userPhone") || "정보 없음";
+    document.getElementById("userId").textContent = localStorage.getItem("userId") || "정보 없음";
+
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+<div class = "pnu_mall" style="text-align: center;">
+  <a href="https://www.pnumall.com" target="_blank">
+  <img src="../images/pnu-mall.png"></a>
+</div>
+</body>
+<footer> <!--Index 페이지에 들어가는 Footer-->
+  <div class="footer-color">
+    <div class="schoolLogos"><img src="../images/pnu-logo.png"></div>
+    <div class="members">
+      인터넷과 웹기초 텀 프로젝트 4 팀<br>
+      김지윤 jiyoon@pusan.ac.kr <br>
+      노신 normengdie@pusan.ac.kr <br>
+      김지수 jisoo1024@pusan.ac.kr
+    </div>
+    <div class="infor">
+      Contact Us : <br> taewoon@pusan.ac.kr <br> <br>
+      @ 2025 PNU INT & WEB Team 4
+    </div>
+    <div class="LOGO">
+      <img src ="../images/pnuhelper-footer.png" width="200" height="200">
+    </div>
+  </div>
+    </footer>
+</html>
