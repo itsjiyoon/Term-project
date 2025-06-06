@@ -146,17 +146,7 @@
     <button onclick="logout()">로그아웃</button>
   </div>
 
-  <script>
-    // 저장된 사용자 정보 불러오기
-    document.getElementById("userName").textContent = localStorage.getItem("userName") || "정보 없음";
-    document.getElementById("userPhone").textContent = localStorage.getItem("userPhone") || "정보 없음";
-    document.getElementById("userId").textContent = localStorage.getItem("userId") || "정보 없음";
-
-    function logout() {
-      localStorage.removeItem("isLoggedIn");
-      window.location.href = "login.html";
-    }
-  </script>
+  <script src="../js/mypage.js"></script>
 <div class = "pnu_mall" style="text-align: center;">
   <a href="https://www.pnumall.com" target="_blank">
   <img src="../images/pnu-mall.png"></a>
