@@ -26,6 +26,16 @@
                     
                     <div>
                         <a href="login.html" class="login-button">로그인</a>
+                        <script>
+                                window.addEventListener("DOMContentLoaded", function () {
+                                    const isLoggedIn = localStorage.getItem("isLoggedIn");
+                                    const loginButton = document.querySelector(".login-button");
+
+                                    if (isLoggedIn === "true" && loginButton) {
+                                        loginButton.textContent = "마이페이지";
+                                        loginButton.href = "mypage.html";
+                                    }
+                                    });</script>
                     </div>
                 </div>
            </div>
