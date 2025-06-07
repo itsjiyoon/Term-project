@@ -1,47 +1,69 @@
 let isIdAvailable = false;
 
-function checkId() {
-    const inputId = document.getElementById("regId").value.trim();
-    const savedId = localStorage.getItem("userId");
+function getUsersFromStorage() {
+  try {
+    const data = JSON.parse(localStorage.getItem("users"));
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    return [];
+  }
+}
 
-    if (!inputId) {
-        document.getElementById("idCheckMsg").innerText = "아이디를 입력하세요.";
-        isIdAvailable = false;
-      } else if (inputId === savedId) {
-        document.getElementById("idCheckMsg").innerText = "이미 사용 중인 아이디입니다.";
-        isIdAvailable = false;
-      } else {
-        document.getElementById("idCheckMsg").innerText = "사용 가능한 아이디입니다.";
-        isIdAvailable = true;
-      }
-    }
+function checkId() {
+  const inputId = document.getElementById("regId").value.trim();
+  const users = getUsersFromStorage();
+
+  const msg = document.getElementById("idCheckMsg");
+
+  if (!inputId) {
+    msg.innerText = "아이디를 입력하세요.";
+    isIdAvailable = false;
+    return;
+  }
+
+  const isDuplicate = users.some(user => user.id === inputId);
+
+  if (isDuplicate) {
+    msg.innerText = "이미 사용 중인 아이디입니다.";
+    isIdAvailable = false;
+  } else {
+    msg.innerText = "사용 가능한 아이디입니다.";
+    isIdAvailable = true;
+  }
+}
 
 function register(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim().replace(/[\s-]/g, "");
-    const id = document.getElementById("regId").value.trim();
-    const pw = document.getElementById("regPw").value;
-    const pwConfirm = document.getElementById("regPwConfirm").value;
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim().replace(/[\s-]/g, "");
+  const id = document.getElementById("regId").value.trim();
+  const pw = document.getElementById("regPw").value;
+  const pwConfirm = document.getElementById("regPwConfirm").value;
+  const pwMsg = document.getElementById("pwCheckMsg");
 
-    if (!isIdAvailable) {
-        alert("아이디 중복 확인을 해주세요.");
-        return;
-      }
+  if (!isIdAvailable) {
+    alert("아이디 중복 확인을 해주세요.");
+    return;
+  }
 
-      if (pw !== pwConfirm) {
-        document.getElementById("pwCheckMsg").innerText = "비밀번호가 일치하지 않습니다.";
-        return;
-      } else {
-        document.getElementById("pwCheckMsg").innerText = "";
-      }
+  if (pw !== pwConfirm) {
+    pwMsg.innerText = "비밀번호가 일치하지 않습니다.";
+    return;
+  } else {
+    pwMsg.innerText = "";
+  }
 
-      localStorage.setItem("userId", id);
-      localStorage.setItem("userPw", pw);
-      localStorage.setItem("userName", name);
-      localStorage.setItem("userPhone", phone); // 공백 및 하이픈 제거 후 저장
+  const users = getUsersFromStorage();
+  users.push({
+    id: id,
+    pw: pw,
+    name: name,
+    phone: phone
+  });
 
-      alert("회원가입이 완료되었습니다.");
-      window.location.href = "login.html";
-    }
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("회원가입이 완료되었습니다.");
+  window.location.href = "login.html";
+}
