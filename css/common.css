@@ -16,7 +16,7 @@ body {
 
 .footer-color {
   width: auto;
-  height: 100px;
+  height: 120px;
   background-color: #0071CE;
   margin: 0px;
   color: white;
@@ -137,6 +137,11 @@ a:hover {
 }
 
 .schoolLogos img{
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
+}
+
+.schoolLogos,.LOGO,.LOGO img {
+  margin: 0;
+  padding: 0 !important;
 }
