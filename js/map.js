@@ -75,9 +75,7 @@ function placesSearchCB(data, status, pagination) {
         const moveLatLon = new kakao.maps.LatLng(place.y, place.x);
         map.setCenter(moveLatLon);
         marker.setPosition(moveLatLon);
-        
-        // 카카오맵 후기 페이지를 iframe에 로드 시도
-        // 대부분의 경우 보안 정책으로 인해 로드되지 않을 수 있습니다.
+
         if (kakaoReviewIframe) {
             kakaoReviewIframe.src = `${place.place_url}#comment`;
             console.log(`Attempting to load Kakao review iframe with: ${kakaoReviewIframe.src}`);

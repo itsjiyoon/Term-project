@@ -24,8 +24,8 @@ app.get('/search', async (req, res) => {
     const response = await fetch(`https://openapi.naver.com/v1/search/blog.json?query=${encodeURIComponent(query)}&display=10&start=1&sort=sim`, {
       method: 'GET',
       headers: {
-        'X-Naver-Client-Id': 'caw9dguoHrSsVW7VArQQ',
-        'X-Naver-Client-Secret': 'ajWkgu0Jcj'
+        'X-Naver-Client-Id': '',
+        'X-Naver-Client-Secret': ''
       }
     });
 
